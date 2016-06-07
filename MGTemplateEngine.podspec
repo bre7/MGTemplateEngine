@@ -11,6 +11,6 @@ Pod::Spec.new do |s|
   s.osx.deployment_target = '10.9'
   s.requires_arc = true
   
-  s.public_header_files = 'Source/*.h'
-  s.source_files = 'Source/*.{h,m}'
+  s.public_header_files = 'Sources/*.h'
+  s.source_files = 'Sources/*.{h,m}'
 end
