@@ -76,6 +76,6 @@
 
 // Processing templates.
 - (NSString *)processTemplate:(NSString *)templateString withVariables:(NSDictionary *)variables;
-- (NSString *)processTemplateInFileAtPath:(NSString *)templatePath withVariables:(NSDictionary *)variables;
+- (nullable NSString *)processTemplateInFileAtPath:(NSString *)templatePath withVariables:(NSDictionary *)variables;
 
 @end

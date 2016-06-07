@@ -626,7 +626,7 @@ but current block was started by \"%@\" marker",
 }
 
 
-- (NSString *)processTemplateInFileAtPath:(NSString *)templatePath withVariables:(NSDictionary *)variables
+- (nullable NSString *)processTemplateInFileAtPath:(NSString *)templatePath withVariables:(NSDictionary *)variables
 {
 	NSString *result = nil;
 	NSStringEncoding enc;
