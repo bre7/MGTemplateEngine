@@ -40,12 +40,41 @@ MGTemplateEngine offers the following features:
 
 	foo.4.bar (remembering that array indices are zero-based!)
 
+## Installation
+
+### CocoaPods
+
+[CocoaPods](http://cocoapods.org) is a dependency manager for Cocoa projects. You can install it with the following command:
+
+```bash
+$ gem install cocoapods
+```
+
+
+To integrate into your Xcode project using CocoaPods, specify it in your `Podfile`:
+
+```ruby
+source 'https://github.com/CocoaPods/Specs.git'
+
+platform :ios, '9.0'
+use_frameworks!
+
+target '<Your Target Name>' do
+	pod 'MGTemplateEngine', :git => 'https://github.com/bre7/MGTemplateEngine.git'
+end
+```
+
+Then, run the following command:
+
+```bash
+$ pod install
+```
 
 
 Requirements
 ------------
 
-MGTemplateEngine requires Mac OS X 10.5 (Leopard) or later.
+MGTemplateEngine requires Mac OSX >= 10.9 or iOS >= 7.
 
 
 
