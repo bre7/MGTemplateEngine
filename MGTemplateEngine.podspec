@@ -11,9 +11,6 @@ Pod::Spec.new do |s|
   s.osx.deployment_target = '10.9'
   s.requires_arc = true
   
-  s.source_files = 'PermissionScope/*.swift'
-  s.source_files = 'Source/*.swift'
-  
   s.public_header_files = 'Source/*.h'
   s.source_files = 'Source/*.{h,m}'
 end
