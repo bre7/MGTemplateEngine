@@ -4,6 +4,24 @@ MGTemplateEngine
 By Matt Legend Gemmell<br>
 http://mattgemmell.com/ 
 
+tl;dr
+-----
+
+API for processing templates using default matchers, etc.:
+
+```swift
+
+public class MGTemplateEngine {
+	//
+	
+	public func processTemplate(templateString: String!, withVariables variables: [NSObject : AnyObject]!) -> String!
+
+	public func processTemplateInFileAtPath(templatePath: String!, withVariables variables: [NSObject : AnyObject]!) -> String?
+	
+}
+```
+
+
 What is it?
 -----------
 
@@ -39,6 +57,8 @@ MGTemplateEngine offers the following features:
 * Access variables using familiar Key-Value Coding (KVC) key-paths, with enhancements. For example, if you had an NSDictionary containing an NSArray for the key "foo", and that array contained 5 NSDictionaries, each of which had an NSString for the key "bar", you could access the value of the fifth dictionary's "bar" object using this syntax:
 
 	foo.4.bar (remembering that array indices are zero-based!)
+
+
 
 ## Installation
 
@@ -76,6 +96,30 @@ Requirements
 
 MGTemplateEngine requires Mac OSX >= 10.9 or iOS >= 7.
 
+
+Example
+-------
+
+Simple usage example in Swift:
+
+```swift
+import MGTemplateEngine
+
+let engine = MGTemplateEngine()
+engine.matcher = ICUTemplateMatcher(templateEngine: engine)
+
+// Sample template
+let templateContent = "<ul><li>Name: {{ClientName}}</li><li>Contact Number: {{ClientPhone}}</li><li>EMail: {{ClientEMail}}</li></ul>"
+let variables: [String : String] = ["ClientName" : "Placeholder Name",
+											"ClientPhone" : "0123456789",
+                                     "ClientEMail" : "place@holder.email"]
+    
+// Process the template and display the results.
+let parsedTemplate = engine.processTemplate(templateContent, withVariables:variables)
+// `processTemplateInFileAtPath` can also be used for file paths
+
+print("Parsed Template: \(parsedTemplate)")
+```
 
 
 License
