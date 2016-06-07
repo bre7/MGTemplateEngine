@@ -24,23 +24,21 @@ public class MGTemplateEngine {
 Table of Contents
 =================
 
-- [MGTemplateEngine](#)
-- [tl;dr](#)
-- [What is it?](#)
-- [Features](#)
-- [Installation](#)
-	- [CocoaPods](#)
-- [Requirements](#)
-- [Example](#)
-- [License](#)
-- [Extensibility](#)
-- [Standard language features](#)
-- [Standard data filters](#)
-- [Feature Requests and Bug Reports](#)
+* [MGTemplateEngine](#mgtemplateengine)
+* [tl;dr](#tldr)
+* [What is it?](#what-is-it)
+* [Features](#features)
+* [Installation](#installation)
+  * [CocoaPods](#cocoapods)
+* [Requirements](#requirements)
+* [Example](#example)
+* [License](#license)
+* [Extensibility](#extensibility)
+* [Standard language features](#standard-language-features)
+* [Standard data filters](#standard-data-filters)
+* [Feature Requests and Bug Reports](#feature-requests-and-bug-reports)
 
-Generated with [DocToc](http://doctoc.herokuapp.com/)
-
-
+Created by [gh-md-toc](https://github.com/ekalinin/github-markdown-toc.go)
 What is it?
 -----------
 
